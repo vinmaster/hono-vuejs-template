@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import TheWelcome from '../components/TheWelcome.vue';
-import { HttpClient } from '@/lib/HttpClient';
+import { HttpClient } from '../lib/HttpClient';
 
 let users = ref<any[]>([]);
 

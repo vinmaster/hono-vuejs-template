@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import TheWelcome from '../components/TheWelcome.vue';
-import { HttpClient } from '@/lib/HttpClient';
-import router from '@/router';
+import { HttpClient } from '../lib/HttpClient';
+import router from '../router';
 
 let env = import.meta.env.MODE;
 let username = ref('');
