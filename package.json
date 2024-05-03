@@ -1,0 +1,28 @@
+{
+  "name": "hono-vuejs-template",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --raw \"bun:dev-*\"",
+    "dev-client": "cd ./src/client && bun dev",
+    "dev-server": "bun --watch ./src/server/index.ts",
+    "clean-client": "rm -rf ./src/client/dist",
+    "build-client": "cd ./src/client && bun run build",
+    "start": "NODE_ENV=production bun --watch ./src/server/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^8.2.2",
+    "drizzle-kit": "^0.20.17"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.2.1",
+    "drizzle-orm": "^0.30.10",
+    "drizzle-zod": "^0.5.1",
+    "hono": "^4.2.9",
+    "zod": "^3.23.5"
+  }
+}
