@@ -8,7 +8,7 @@
     "dev-server": "bun --watch ./src/server/index.ts",
     "clean-client": "rm -rf ./src/client/dist",
     "build-client": "cd ./src/client && bun run build",
-    "start": "NODE_ENV=production bun --watch ./src/server/index.ts"
+    "start": "NODE_ENV=production bun ./src/server/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",

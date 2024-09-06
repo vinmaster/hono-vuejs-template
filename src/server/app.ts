@@ -10,6 +10,7 @@ app.use('*', logger());
 app.use('/api/*', cors());
 app.route('/', routes);
 
-app.get('*', serveStatic({ root: './src/client/dist' }));
+app.use(serveStatic({ root: './src/client/dist' }));
+app.get('*', serveStatic({ path: './src/client/dist/index.html' }));
 
 export default app;
